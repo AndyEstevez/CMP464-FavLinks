@@ -43,12 +43,13 @@ class LinkContainer extends React.Component {
     handleRemove = removeLink => {
         //this.state.favLinks.filter(removeLink)
         
-        const newArray = this.state.favLinks.filter(remove => {
-            return remove !== removeLink
-        })
+        var arr = this.state.favLinks;
+        arr.splice(removeLink, 1);
         this.setState({
-            favLinks: [...newArray]
+            favLinks: arr
         })
+        
+        
     }
 
    
