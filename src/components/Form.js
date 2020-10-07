@@ -41,6 +41,7 @@ class Form extends Component {
             name: '',
             URL: ''
         })
+     
     }
 
     
@@ -51,9 +52,9 @@ class Form extends Component {
             <form>
                 {/* TODO - Logic for returning a form element with labels and inputs for link name and URL */}
               <h1>Name</h1>
-              <input name="name" onChange={event => this.handleChange(event)} type="text"/>
+              <input value={this.state.name} name="name" onChange={event => this.handleChange(event)} type="text"/>
               <h1>URL</h1>
-              <input name="URL" onChange={event => this.handleChange(event)} type="text"/>
+              <input value={this.state.URL}  name="URL" onChange={event => this.handleChange(event)} type="text"/>
               <button type="submit" onClick={this.onFormSubmit}>Submit</button>
             </form>
         )
